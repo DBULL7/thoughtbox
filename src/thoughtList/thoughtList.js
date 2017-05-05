@@ -3,13 +3,8 @@ import { ThoughtCard } from '../thoughtCard/thoughtCard.js'
 
 export const ThoughtList = ({ thoughtList }) => {
   let ideas = thoughtList.map(thought => {
-    if(thought.length == 0) {
-      return <div></div>
-    } else {
-      return <ThoughtCard thought={thought}/>
-    }
+      return <ThoughtCard thought={thought} key={thought.id}/>
   })
-  // console.log(ideas)
   return (
     <div className='thoughtList'>
       ThoughtList

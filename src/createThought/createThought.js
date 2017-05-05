@@ -10,7 +10,6 @@ export default class CreateThought extends Component {
  }
 
 submitIdea() {
-  console.log('yay');
   this.props.createThought(this.state)
   this.setState({title: '', body: ''})
 }
